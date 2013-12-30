@@ -24,7 +24,7 @@ moduleB.obj = readonly(obj);
 
 // You can update `obj` from moduleA
 moduleA.obj.A = "d";
-
+// This updates can be seen from moduleB
 console.log(moduleB.obj.A);
 
 // But if you update `obj` through moduleB, it will throws `UnableRewriteException`
