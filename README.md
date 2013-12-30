@@ -1,7 +1,7 @@
 readonly
 ========
 
-Simple reference restriction library between custome module in node object.
+**readonly** is simple reference restriction library between custom module in node object.
 
 ## How to install
 
