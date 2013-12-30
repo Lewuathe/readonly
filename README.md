@@ -1,4 +1,4 @@
-readonly
+readonly [![Build Status](https://travis-ci.org/Lewuathe/readonly.png?branch=master)](https://travis-ci.org/Lewuathe/readonly)
 ========
 
 **readonly** is simple reference restriction library between custom module in node object.
