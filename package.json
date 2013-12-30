@@ -1,7 +1,7 @@
 {
   "name": "readonly",
-  "version": "0.0.2",
-  "description" : "Restriction library of reference in node object",
+  "version": "0.0.3",
+  "description" : "readonly is a simple reference restriction library between custom modules in node object.",
   "repository" : {
           "type" : "git",
           "url"  : "https://github.com/Lewuathe/readonly"
