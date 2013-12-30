@@ -5,25 +5,31 @@ Simple reference restriction library between custome module in node object.
 
 ## How to install
 
-    npm install 
+    npm install readonly
 
 ## How to use
 
-    var readonly = require('readonly');
+```js
+var readonly = require('readonly');
 
-	var obj = {'A':'a','B':'b','C':'c'};
+var obj = {'A':'a','B':'b','C':'c'};
 
-	// Normal ACL. You can use `obj` through moduleA as you like
-	var moduleA = {};
-	moduleA.obj = obj;
+// Normal ACL. You can use `obj` through moduleA as you like
+var moduleA = {};
+moduleA.obj = obj;
 
-	// Readonly restriction of `obj` in moduleB
-	var moduleB = {};
-	moduleB.obj = readonly(obj);
+// Readonly restriction of `obj` in moduleB
+var moduleB = {};
+moduleB.obj = readonly(obj);
 
-	moduleA.obj.A = "d";
+// You can update `obj` from moduleA
+moduleA.obj.A = "d";
 
-	console.log(moduleB.obj.A);
+console.log(moduleB.obj.A);
+
+// But if you update `obj` through moduleB, it will throws `UnableRewriteException`
+moduleA.obj.B = "e";  // --> UnableRewriteException: original cannot be rewrite
+```
 
 ## LICENSE
 
