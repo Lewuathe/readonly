@@ -1,6 +1,6 @@
 {
   "name": "readonly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description" : "Restriction library of reference in node object",
   "repository" : {
           "type" : "git",
