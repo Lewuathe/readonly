@@ -6,6 +6,7 @@
           "type" : "git",
           "url"  : "https://github.com/Lewuathe/readonly"
   },
+  "main": "./lib",
   "scripts": {
         "test" : "node_modules/vows/bin/vows test/*-test.js --spec"
   },
