@@ -23,7 +23,6 @@ vows.describe('ReadOnly function').addBatch({
             var moduleB = {};
             moduleB.obj = readonly(topic);
             assert.throws(function() { moduleB.obj.B = 'b'; }, UnableRewriteException);
-//            assert.equal(moduleB.obj.B, 'b');
         },
     },
 
@@ -71,7 +70,25 @@ vows.describe('ReadOnly function').addBatch({
     'Getter Test': {
         topic: function() {
             var obj = {'A':'a', 'B':'b', 'C':'c'};
+            var cloned = {};
 
+            function makeReadOnlyProperty(cloned, obj, prop) {
+                Object.defineProperty(cloned, prop, {
+                    set: function() {
+                        throw new UnableRewriteException('original cannot be rewrite');
+                    },
+                    get: function() {
+                        return obj[prop]
+                    },
+                    enumerable: true
+                });
+            }
+
+            for (var prop in obj) {
+                makeReadOnlyProperty(cloned, obj, prop);
+            }
+            
+            /*
             function makeGetter(prop) {
                 return function() {
                     var p = prop;
@@ -93,8 +110,8 @@ vows.describe('ReadOnly function').addBatch({
                 });
                 _cloned[prop];
             }
-
-            return _cloned;
+            */
+            return cloned;
         },
 
         'get a': function(obj) {
