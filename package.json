@@ -1,6 +1,6 @@
 {
   "name": "readonly",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description" : "readonly is a simple reference restriction library between custom modules in node object.",
   "repository" : {
           "type" : "git",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
       "pkginfo": "~0.3.0",
-      "underscore": "~1.5.2"
+      "underscore": "1.8.3"
   },
   "devDependencies" : {
       "vows" : "~0.7.0"
