@@ -1,6 +1,6 @@
 {
   "name": "readonly",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description" : "readonly is a simple reference restriction library between custom modules in node object.",
   "repository" : {
           "type" : "git",
@@ -11,7 +11,8 @@
         "test" : "node_modules/vows/bin/vows test/*-test.js --spec"
   },
   "dependencies": {
-      "pkginfo": "~0.3.0"
+      "pkginfo": "~0.3.0",
+      "underscore": "1.8.3"
   },
   "devDependencies" : {
       "vows" : "~0.7.0"

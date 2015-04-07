@@ -3,6 +3,7 @@ var vows = require('vows'),
 
 var readonly = require('../lib/index.js');
 var UnableRewriteException = require('../lib/UnableRewriteException.js');
+var _ = require('underscore');
 
 vows.describe('ReadOnly function').addBatch({
     'Restrict rewrite': {
